@@ -1,0 +1,29 @@
+<!doctype html>
+
+<html>
+  <body>
+    <p id="guest-information"></p>
+    
+    <script type="text/javascript">
+      alert("Welcome to my page!");
+      var person = prompt("Please enter your name", "Guest");
+      var soccer = confirm("Press confirm if you are interested in Soccer.");
+
+      if (person != null && soccer) {
+        document.getElementById("guest-information").innerHTML =
+        person + " is interested in Soccer!";
+      }else if(person != null){
+        document.getElementById("guest-information").innerHTML =
+        person + " is not interested in Soccer.";
+      }else if(soccer){
+        document.getElementById("guest-information").innerHTML =
+        "Our guest is interested in Soccer!";  
+      }else{
+        document.getElementById("guest-information").innerHTML =
+        "Our guest is not interested in Soccer.";
+      }
+
+      console.log(document.getElementById("guest-information").innerHTML);
+    </script>
+  </body>
+</html>
